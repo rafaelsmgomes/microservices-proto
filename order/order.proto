@@ -24,5 +24,5 @@ message GetOrderResponse {
 
 service Order {
   rpc Create(CreateOrderRequest) returns (CreateOrderResponse) {}
-  rpc Create(GetOrderRequest) returns (GetOrderResponse) {}
+  rpc Get(GetOrderRequest) returns (GetOrderResponse) {}
 }
