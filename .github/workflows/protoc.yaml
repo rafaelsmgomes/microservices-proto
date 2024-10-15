@@ -1,5 +1,5 @@
 name: "Protocol Buffer Go Stubs Generation"
-on: 
+on:
   push:
     tags:
       - v**
@@ -11,7 +11,7 @@ jobs:
       matrix:
         service: ["order", "payment", "shipping"]
     steps:
-      - name: Install Go 
+      - name: Install Go
         uses: actions/setup-go@v2
         with:
           go-version: 1.22
@@ -23,4 +23,4 @@ jobs:
         run: |
           chmod +x "${GITHUB_WORKSPACE}/protoc.sh"
           ls -alh ${GITHUB_WORKSPACE}
-          ./protoc.sh ${{ matrix.service }} ${{ env.RELEASE_VERSION }} ${{ github.actor }}@users.noreply.github.com
+          ./protoc.sh ${{ matrix.service }} ${{ env.RELEASE_VERSION }} ${{ github.actor }} ${{ github.actor }}@users.noreply.github.com
