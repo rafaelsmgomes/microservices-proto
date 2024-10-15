@@ -13,6 +13,7 @@ message CreatePaymentResponse {
   int64 bill_id = 2;
 }
 
+// Adding a comment to see if this plays
 service Payment {
   rpc Create(CreatePaymentRequest) returns (CreatePaymentResponse) {}
 }
