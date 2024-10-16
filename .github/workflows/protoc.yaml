@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        service: ["order"]
+        service: ["order", "payment", "shipping"]
     steps:
       - name: "Print working directory"
         run: pwd
